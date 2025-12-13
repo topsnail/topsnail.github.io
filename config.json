@@ -1,6 +1,11 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
+    "title":"Topmer",
+    "subTitle":"门外的汉子，初探...",
+    "avatarUrl":"/avatar.svg",
+    "faviconUrl":"/favicon.svg",
+    "GMEEK_VERSION":"last",
+    "onePageListNum":15,
+    "bottomText":"Topmer",
+    "startSite":"06/29/2017"
+    
 }
