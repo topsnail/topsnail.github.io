@@ -6,9 +6,10 @@
     "faviconUrl":"/favicon.svg",
     "GMEEK_VERSION":"last",
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "commentLabelColor":"#006b75",
     "i18n":"CN",
     "onePageListNum":15,
+    "needComment":0,
     "bottomText":"Topmer",
     "startSite":"06/29/2017"
-    
 }
