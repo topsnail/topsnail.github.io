@@ -1,9 +1,12 @@
 {
     "title":"Topmer",
     "subTitle":"门外的汉子，初探...",
+    "homeUrl":"https://b.topmer.top",
     "avatarUrl":"/avatar.svg",
     "faviconUrl":"/favicon.svg",
     "GMEEK_VERSION":"last",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "i18n":"CN",
     "onePageListNum":15,
     "bottomText":"Topmer",
     "startSite":"06/29/2017"
