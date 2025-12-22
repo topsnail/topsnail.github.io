@@ -1,4 +1,5 @@
 (function() {
+    // 【核心参数配置区】
     const UI_CONFIG = {
         bodyBg: 'rgba(255, 255, 255, 0.85)', 
         borderRadius: '12px'
@@ -6,8 +7,8 @@
 
     const themeCss = `
         html { 
-            background: url('/bj2.webp') no-repeat center center fixed !important; 
-            background-size: cover !important; 
+            /* 方案二：渐变色背景 - 采用柔和的线性渐变 */
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%) fixed !important; 
         }
         
         body { 
@@ -15,7 +16,7 @@
             max-width: 885px !important; 
             margin: 25px auto !important; 
             border-radius: ${UI_CONFIG.borderRadius} !important; 
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.3) !important; 
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15) !important; 
             padding: 20px !important; 
         }
 
@@ -76,6 +77,7 @@
     style.textContent = themeCss;
     document.head.appendChild(style);
 
+    // 搜索框逻辑补丁（保持不变）
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             const searchInput = document.querySelector('.subnav-search-input');
