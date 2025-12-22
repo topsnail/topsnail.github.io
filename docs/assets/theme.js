@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==============================================================================
     const GLOBAL_CONFIG = {
         // ① 背景图地址
-        bgUrl: 'bj2.webp', 
+        bgUrl: '/bj2.webp', 
         // ② 主体不透明度：建议 0.8 到 0.9 之间
         bodyBg: 'rgba(237, 239, 233, 0.85)',
         // ③ 页面最大宽度
