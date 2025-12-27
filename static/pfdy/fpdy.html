@@ -28,7 +28,7 @@
         }
 
         /* 毛玻璃主卡片 */
-        .main-card {
+        。main-card {
             width: 100%; max-width: 900px;
             background: rgba(255, 255, 255, 0.9); 
             backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
@@ -135,6 +135,7 @@
     <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileIn').click()">
         <p style="font-size: 40px; margin-bottom: 15px;">📥</p>
         <p style="font-weight: 600; color: #2c3e50;">将 PDF 电子发票拖入此处</p>
+        <p style="font-size: 13px; color: #7f8c8d; mt: 5px;">或 <span style="color: #4a6d7c; text-decoration: underline;">点击上传</span>（支持多选）</p>
         <p style="font-size: 13px; color: #7f8c8d; mt: 5px;">或 <span style="color: #4a6d7c; text-decoration: underline;">点击上传</span>（支持多选）</p>
         <input type="file" id="fileIn" accept="application/pdf" multiple style="display:none;">
     </div>
@@ -327,4 +328,5 @@
     }
 </script>
 </body>
+
 </html>
