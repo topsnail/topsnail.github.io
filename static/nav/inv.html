@@ -18,8 +18,9 @@
             min-height: 100vh; 
             padding: 12px 20px 20px 20px; 
             display: flex; 
+            flex-direction: column;
             justify-content: center;
-            align-items: flex-start; 
+            align-items: center;
             transition: all 0.1s ease;
         }
 
@@ -32,7 +33,7 @@
             100% { background-position: 0% 50%; } 
         }
 
-        。main-card {
+        .main-card {
             width: 100%; 
             max-width: 1050px;
             background: rgba(235, 230, 230, 0.75); 
@@ -583,6 +584,29 @@
             color: #94a3b8;
             font-style: italic;
         }
+        
+        /* 底部版权信息样式 */
+        .footer {
+            width: 100%;
+            max-width: 1050px;
+            text-align: center;
+            padding: 15px 0;
+            color: #64748b;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        
+        .footer a {
+            color: #147a61;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        
+        .footer a:hover {
+            color: #0d5d49;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body id="theBody" class="mode-4">
@@ -590,7 +614,7 @@
         <div class="print-dialog-content">
             <h3>🖨️ 打印设置提示</h3>
             <p>当前布局模式：<strong id="printModeText">1页4张(横向)</strong></p>
-            <p>请在稍后的打印设置中确认以下事项:(一般无需改动)</p>
+            <p>请在稍后的打印设置中确认以下事项：(一般无需设置)</p>
             <p>1. <strong>纸张方向</strong>：设置为 <strong id="printOrientationText">横向</strong></p>
             <p>2. <strong>纸张大小</strong>：设置为 <strong>A4</strong></p>
             <p>3. <strong>页边距</strong>：设置为 <strong>无</strong> 或 <strong>最小</strong></p>
@@ -655,7 +679,10 @@
         
         <div id="previewGrid"></div>
     </div>
-
+    <div class="footer">
+        Copyright © 2025 <a href="https://topmer.top/" target="_blank">Topmer</a>
+    </div>
+    <script src="https://events.vercount.one/js"></script>
     <script>
         const CONFIG = {
             PDF_RENDER_SCALE: 2.5,
