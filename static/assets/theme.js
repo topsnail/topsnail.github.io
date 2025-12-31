@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const GLOBAL_CONFIG = {
         // 您提供的五种核心颜色
         colors: ['#9ac47a', '#A3B18A', '#D9AD98', '#A5A5C1', '#C9B380'],
-        bodyBg: 'rgba(237, 239, 233, 0.85)',
+        bodyBg: 'rgba(237, 239, 233, 0.7)',
         maxWidth: '885px',
         borderRadius: '10px',
         transition: '0.2s ease-out',
         accentColor: 'rgb(239, 112, 96)',
-        codeBg: 'rgba(243, 244, 243, 0.97)',
+        codeBg: 'rgba(243, 244, 243, 0.9)',
         hoverColor: '#c3e4e3'
     };
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
 
     // 路由逻辑样式注入
-    if (currentUrl === '/' || currentUrl.includes('/index.html') || currentUrl.includes('/page')) {
+    if (currentUrl === '/' || currentUrl.includes('/index.html') || currentUrl。includes('/page')) {
         finalCss += `
             .SideNav-item:hover { background-color: ${GLOBAL_CONFIG.hoverColor}; transform: scale(1.02); box-shadow: 0 0 5px rgba(0,0,0,0.5); }
         `;
