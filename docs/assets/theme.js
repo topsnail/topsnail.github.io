@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const GLOBAL_CONFIG = {
         // 你选定的五种呼吸颜色
-        colors: ['#9ac47a', '#A3B18A', '#D9AD98', '#A5A5C1', '#C9B380'],
+        colors: [-45deg '#9ac47a', '#A3B18A', '#D9AD98', '#A5A5C1', '#C9B380'],
         bodyBg: 'rgba(237, 239, 233, 0.85)',
         maxWidth: '885px',
         borderRadius: '10px',
@@ -14,20 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     let finalCss = `
-        /* 定义呼吸动画：在五种颜色间平滑切换 */
-        @keyframes breatheBackground {
-            0%   { background-color: ${GLOBAL_CONFIG.colors[0]}; }
-            25%  { background-color: ${GLOBAL_CONFIG.colors[1]}; }
-            50%  { background-color: ${GLOBAL_CONFIG.colors[2]}; }
-            75%  { background-color: ${GLOBAL_CONFIG.colors[3]}; }
-            100% { background-color: ${GLOBAL_CONFIG.colors[4]}; }
-        }
+     /* 定义带角度的渐变呼吸动画 */
+@keyframes breatheBackground {
+    0%   { background-image: linear-gradient(135deg, ${GLOBAL_CONFIG.colors[0]}, #ffffff); }
+    25%  { background-image: linear-gradient(135deg, ${GLOBAL_CONFIG.colors[1]}, #ffffff); }
+    50%  { background-image: linear-gradient(135deg, ${GLOBAL_CONFIG.colors[2]}, #ffffff); }
+    75%  { background-image: linear-gradient(135deg, ${GLOBAL_CONFIG.colors[3]}, #ffffff); }
+    100% { background-image: linear-gradient(135deg, ${GLOBAL_CONFIG.colors[4]}, #ffffff); }
+}
 
-        html { 
-            /* 设置15秒周期，无限循环，且来回平滑过渡 */
-            animation: breatheBackground 15s infinite alternate ease-in-out !important; 
-            min-height: 100%;
-        }
+html { 
+    animation: breatheBackground 15s infinite alternate ease-in-out !important; 
+    min-height: 100%;
+    background-attachment: fixed; /* 确保背景不随滚动条滚动 */
+}
 
         body { 
             min-width: 200px; max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
