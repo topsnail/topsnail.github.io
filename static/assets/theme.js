@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentUrl = window.location.pathname;
 
     const GLOBAL_CONFIG = {
-        bgUrl: '/bj2.webp',
+        // 你选定的五种呼吸颜色
+        colors: ['#9ac47a', '#A3B18A', '#D9AD98', '#A5A5C1', '#C9B380'],
         bodyBg: 'rgba(237, 239, 233, 0.85)',
         maxWidth: '885px',
         borderRadius: '10px',
@@ -12,24 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
         hoverColor: '#c3e4e3'
     };
 
-    const preloadBackgroundImage = () => {
-        const bgImg = new Image();
-        bgImg.src = GLOBAL_CONFIG.bgUrl;
-        
-        bgImg.onerror = () => {
-            const fallbackStyle = document.createElement('style');
-            fallbackStyle.innerHTML = `
-                html { 
-                    background: #e9ebe5 !important;
-                }
-            `;
-            document.head.appendChild(fallbackStyle);
-        };
-    };
-    preloadBackgroundImage();
-
     let finalCss = `
-        html { background: url('${GLOBAL_CONFIG.bgUrl}') no-repeat center center fixed !important; background-size: cover !important; }
+        /* 定义呼吸动画：在五种颜色间平滑切换 */
+        @keyframes breatheBackground {
+            0%   { background-color: ${GLOBAL_CONFIG.colors[0]}; }
+            25%  { background-color: ${GLOBAL_CONFIG.colors[1]}; }
+            50%  { background-color: ${GLOBAL_CONFIG.colors[2]}; }
+            75%  { background-color: ${GLOBAL_CONFIG.colors[3]}; }
+            100% { background-color: ${GLOBAL_CONFIG.colors[4]}; }
+        }
+
+        html { 
+            /* 设置15秒周期，无限循环，且来回平滑过渡 */
+            animation: breatheBackground 15s infinite alternate ease-in-out !important; 
+            min-height: 100%;
+        }
+
         body { 
             min-width: 200px; max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
             margin: 10px auto !important; font-family: sans-serif; line-height: 1.25;
@@ -54,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
 
+    // 路由逻辑样式注入
     if (currentUrl === '/' || currentUrl.includes('/index.html') || currentUrl.includes('/page')) {
         finalCss += `
             .SideNav-item:hover { background-color: ${GLOBAL_CONFIG.hoverColor}; transform: scale(1.02); box-shadow: 0 0 5px rgba(0,0,0,0.5); }
@@ -64,24 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
             .markdown-body img { border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.78); }
             .markdown-body .highlight pre, .markdown-body pre { 
                 background-color: ${GLOBAL_CONFIG.codeBg}; 
-                padding-top: 20px; 
+                padding: 16px !important; 
                 border-radius: 8px;
                 overflow-x: auto;
                 scrollbar-width: thin;
                 scrollbar-color: ${GLOBAL_CONFIG.accentColor} transparent;
-                padding: 16px !important;
                 line-height: 1.5 !important;
-            }
-            .markdown-body pre::-webkit-scrollbar {
-                height: 6px;
-                width: 6px;
-            }
-            .markdown-body pre::-webkit-scrollbar-thumb {
-                background-color: ${GLOBAL_CONFIG.accentColor};
-                border-radius: 3px;
-            }
-            .markdown-body pre::-webkit-scrollbar-track {
-                background: transparent;
             }
             .markdown-body h1 { display: inline-block; background: ${GLOBAL_CONFIG.accentColor}; color: #ffffff; padding: 3px 10px 1px; border-radius: 8px; }
         `;
@@ -105,21 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (window.MutationObserver) {
             const observer = new MutationObserver(() => {
-                if (bindSearchEnter()) {
-                    observer.disconnect();
-                }
+                if (bindSearchEnter()) observer.disconnect();
             });
             const subnav = document.querySelector('.subnav');
             observer.observe(subnav || document.body, { childList: true, subtree: true });
-        } else {
-            const searchTimer = setInterval(() => {
-                if (bindSearchEnter()) {
-                    clearInterval(searchTimer);
-                }
-            }, 200);
-            setTimeout(() => {
-                clearInterval(searchTimer);
-            }, 10000);
         }
     }
 
@@ -127,25 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
     style.innerHTML = finalCss;
     document.head.appendChild(style);
 
-    const enhanceRobustness = () => {
-        const sideNavItems = document.querySelectorAll('.SideNav-item');
-        const labelTimes = document.querySelectorAll('.LabelTime');
-        if (sideNavItems.length && labelTimes.length) {
-            return true;
-        }
-        return false;
-    };
-    enhanceRobustness();
-
+    // 图片懒加载与错误处理逻辑
     const initImageLazyLoad = () => {
         const images = document.querySelectorAll('.markdown-body img');
         images.forEach(img => {
-            if (!img.hasAttribute('loading')) {
-                img.setAttribute('loading', 'lazy');
-            }
+            if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
             img.onerror = () => {
                 img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 400 200"><text x="50%" y="50%" text-anchor="middle" fill="#999" font-size="16">图片加载失败</text></svg>';
-                img.alt = '图片加载失败';
             };
         });
     };
