@@ -12,31 +12,43 @@ document.addEventListener('DOMContentLoaded', function() {
         hoverColor: '#c3e4e3'
     };
 
-    // 背景使用渐变呼吸灯效果，不再使用背景图片
-    // preloadBackgroundImage 函数保留但不执行，避免影响渐变动画
+    const preloadBackgroundImage = () => {
+        const bgImg = new Image();
+        bgImg.src = GLOBAL_CONFIG.bgUrl;
+        
+        bgImg.onerror = () => {
+            const fallbackStyle = document.createElement('style');
+            fallbackStyle.innerHTML = `
+                html { 
+                    background: #e9ebe5 !important;
+                }
+            `;
+            document.head.appendChild(fallbackStyle);
+        };
+    };
+    preloadBackgroundImage();
 
     let finalCss = `
-        @keyframes gradientBreathing {
-            0%, 100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); }
-            25% { background: linear-gradient(135deg, #764ba2 0%, #f093fb 50%, #667eea 100%); }
-            50% { background: linear-gradient(135deg, #f093fb 0%, #667eea 50%, #764ba2 100%); }
-            75% { background: linear-gradient(135deg, #f093fb 0%, #764ba2 50%, #667eea 100%); }
-        }
         html { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
-            animation: gradientBreathing 8s ease-in-out infinite !important;
+            background: url('${GLOBAL_CONFIG.bgUrl}') no-repeat center center fixed !important;
+            background-size: cover !important;
             min-height: 100vh !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
         }
         body { 
-            min-width: 200px; max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
+            min-width: 200px !important; 
+            max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
             margin: 0 auto !important; 
-            font-family: sans-serif; line-height: 1.25;
-            background: ${GLOBAL_CONFIG.bodyBg} !important; border-radius: ${GLOBAL_CONFIG.borderRadius} !important;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important; overflow: auto;
+            font-family: sans-serif !important; 
+            line-height: 1.25 !important;
+            background: ${GLOBAL_CONFIG.bodyBg} !important; 
+            border-radius: ${GLOBAL_CONFIG.borderRadius} !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important; 
+            overflow: auto !important;
             position: relative !important;
+            box-sizing: border-box !important;
         }
         .SideNav { background: rgba(255, 255, 255, 0.6); border-radius: ${GLOBAL_CONFIG.borderRadius}; }
         .SideNav-item { transition: ${GLOBAL_CONFIG.transition}; }
@@ -50,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
         .markdown-body img { transition: ${GLOBAL_CONFIG.transition} !important; }
         .markdown-body a { color: ${GLOBAL_CONFIG.accentColor}; transition: color ${GLOBAL_CONFIG.transition} !important; }
         .markdown-body a:hover { color: #d65a47 !important; }
-        @media (min-width: 1200px) {
+        @media (min-width: 1100px) {
             body { max-width: ${GLOBAL_CONFIG.maxWidth} !important; }
         }
-        @media (min-width: 768px) and (max-width: 1199px) {
-            body { max-width: 90% !important; }
+        @media (min-width: 768px) and (max-width: 1099px) {
+            body { max-width: calc(100% - 40px) !important; }
             .SideNav { margin: 0 16px !important; }
         }
         @media (max-width: 767px) {
