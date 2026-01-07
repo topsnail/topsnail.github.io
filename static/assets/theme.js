@@ -29,26 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
     preloadBackgroundImage();
 
     let finalCss = `
-        html { 
-            background: url('${GLOBAL_CONFIG.bgUrl}') no-repeat center center fixed !important;
-            background-size: cover !important;
-            min-height: 100vh !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
+        html { background: url('${GLOBAL_CONFIG.bgUrl}') no-repeat center center fixed !important; background-size: cover !important; }
         body { 
-            min-width: 200px !important; 
-            max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
-            margin: 0 auto !important; 
-            font-family: sans-serif !important; 
-            line-height: 1.25 !important;
-            background: ${GLOBAL_CONFIG.bodyBg} !important; 
-            border-radius: ${GLOBAL_CONFIG.borderRadius} !important;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important; 
-            overflow: auto !important;
-            position: relative !important;
-            box-sizing: border-box !important;
+            min-width: 200px; max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
+            margin: 10px auto !important; font-family: sans-serif; line-height: 1.25;
+            background: ${GLOBAL_CONFIG.bodyBg} !important; border-radius: ${GLOBAL_CONFIG.borderRadius} !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important; overflow: auto;
         }
         .SideNav { background: rgba(255, 255, 255, 0.6); border-radius: ${GLOBAL_CONFIG.borderRadius}; }
         .SideNav-item { transition: ${GLOBAL_CONFIG.transition}; }
@@ -62,28 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .markdown-body img { transition: ${GLOBAL_CONFIG.transition} !important; }
         .markdown-body a { color: ${GLOBAL_CONFIG.accentColor}; transition: color ${GLOBAL_CONFIG.transition} !important; }
         .markdown-body a:hover { color: #d65a47 !important; }
-        @media (min-width: 900px) {
-            body { max-width: ${GLOBAL_CONFIG.maxWidth} !important; }
-        }
-        @media (min-width: 768px) and (max-width: 899px) {
-            body { max-width: calc(100% - 40px) !important; }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            body { max-width: 90% !important; }
             .SideNav { margin: 0 16px !important; }
-        }
-        @media (max-width: 767px) {
-            html { 
-                align-items: flex-start !important;
-                padding-top: 10px !important;
-                padding-bottom: 10px !important;
-            }
-            body { 
-                max-width: calc(100% - 20px) !important;
-                margin: 10px auto !important;
-            }
         }
     `;
 
     if (currentUrl === '/' || currentUrl.includes('/index.html') || currentUrl.includes('/page')) {
         finalCss += `
+            html { min-height: 100vh !important; display: flex !important; align-items: center !important; justify-content: center !important; }
             .SideNav-item:hover { background-color: ${GLOBAL_CONFIG.hoverColor}; transform: scale(1.02); box-shadow: 0 0 5px rgba(0,0,0,0.5); }
         `;
     } 
@@ -153,8 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const style = document.createElement("style");
     style.innerHTML = finalCss;
-    style.setAttribute('data-theme', 'gmeek-custom');
-    // 确保样式在head的最后，覆盖HTML内联样式
     document.head.appendChild(style);
 
     const enhanceRobustness = () => {
