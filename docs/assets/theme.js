@@ -52,6 +52,31 @@ document.addEventListener('DOMContentLoaded', function() {
             body { max-width: 90% !important; }
             .SideNav { margin: 0 16px !important; }
         }
+        /* 新增手机端适配规则（767px及以下） */
+        @media (max-width: 767px) {
+            body { 
+                max-width: 95% !important; /* 手机端占屏幕95%宽度，避免过窄 */
+                width: 95% !important; /* 主页场景下同步宽度 */
+                margin: 5px auto !important; /* 减少上下边距，适配小屏 */
+                padding: 10px !important; /* 增加内边距，避免内容贴边 */
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; /* 弱化阴影，适配小屏 */
+            }
+            .SideNav { 
+                margin: 0 8px !important; /* 侧边栏减少左右边距 */
+                padding: 5px !important; /* 侧边栏内边距适配 */
+            }
+            .markdown-body pre { 
+                padding: 10px !important; /* 代码块内边距适配 */
+                font-size: 14px !important; /* 代码字体缩小，适配小屏 */
+            }
+            .markdown-body h1 { 
+                padding: 2px 8px 1px !important; /* 标题内边距适配 */
+                font-size: 1.5em !important; /* 标题字体缩小，适配小屏 */
+            }
+            .post-item { 
+                margin: 10px 0 !important; /* 文章项间距适配 */
+            }
+        }
     `;
 
     if (currentUrl === '/' || currentUrl.includes('/index.html') || currentUrl.includes('/page')) {
