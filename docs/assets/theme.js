@@ -29,12 +29,27 @@ document.addEventListener('DOMContentLoaded', function() {
     preloadBackgroundImage();
 
     let finalCss = `
-        html { background: url('${GLOBAL_CONFIG.bgUrl}') no-repeat center center fixed !important; background-size: cover !important; }
+        @keyframes gradientBreathing {
+            0%, 100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); }
+            25% { background: linear-gradient(135deg, #764ba2 0%, #f093fb 50%, #667eea 100%); }
+            50% { background: linear-gradient(135deg, #f093fb 0%, #667eea 50%, #764ba2 100%); }
+            75% { background: linear-gradient(135deg, #f093fb 0%, #764ba2 50%, #667eea 100%); }
+        }
+        html { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+            animation: gradientBreathing 8s ease-in-out infinite !important;
+            min-height: 100vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
         body { 
             min-width: 200px; max-width: ${GLOBAL_CONFIG.maxWidth} !important; 
-            margin: 10px auto !important; font-family: sans-serif; line-height: 1.25;
+            margin: 0 auto !important; 
+            font-family: sans-serif; line-height: 1.25;
             background: ${GLOBAL_CONFIG.bodyBg} !important; border-radius: ${GLOBAL_CONFIG.borderRadius} !important;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important; overflow: auto;
+            position: relative !important;
         }
         .SideNav { background: rgba(255, 255, 255, 0.6); border-radius: ${GLOBAL_CONFIG.borderRadius}; }
         .SideNav-item { transition: ${GLOBAL_CONFIG.transition}; }
@@ -51,6 +66,16 @@ document.addEventListener('DOMContentLoaded', function() {
         @media (min-width: 768px) and (max-width: 1024px) {
             body { max-width: 90% !important; }
             .SideNav { margin: 0 16px !important; }
+        }
+        @media (max-width: 767px) {
+            html { 
+                align-items: flex-start !important;
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+            }
+            body { 
+                margin: 10px auto !important;
+            }
         }
     `;
 
