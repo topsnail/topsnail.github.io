@@ -10,7 +10,9 @@ let _chromiumMajorVersionInUserAgent = null
   , _mouseoverTimer
   , _preloadedList = new Set()
 
-init()
+document.addEventListener('DOMContentLoaded', function() {
+  init()
+});
 
 function init() {
   const supportChecksRelList = document.createElement('link').relList
