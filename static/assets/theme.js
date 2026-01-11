@@ -1,4 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {    
+    const currentUrl = window.location.pathname;
 
+    const GLOBAL_CONFIG = {
+        bgUrl: '/bj2.webp',
+        bodyBg: 'rgba(237, 239, 233, 0.85)',
+        maxWidth: '885px',
+        borderRadius: '10px',
+        transition: '0.2s ease-out',
+        accentColor: 'rgb(239, 112, 96)',
+        codeBg: 'rgba(243, 244, 243, 0.97)',
+        hoverColor: '#c3e4e3'
+    };
+
+    const preloadBackgroundImage = () => {
+        const bgImg = new Image();
+        bgImg.src = GLOBAL_CONFIG.bgUrl;
+        
+        bgImg.onerror = () => {
+            const fallbackStyle = document.createElement('style');
+            fallbackStyle.innerHTML = `
+                html { 
+                    background: #e9ebe5 !important;
                 }
             `;
             document.head.appendChild(fallbackStyle);
@@ -17,7 +39,7 @@
         .SideNav { background: rgba(255, 255, 255, 0.6); border-radius: ${GLOBAL_CONFIG.borderRadius}; width: 100%; max-width: 100%; min-width: 0 !important; }
         .SideNav-item { transition: ${GLOBAL_CONFIG.transition}; }
         .LabelTime { display: inline-block !important; visibility: visible !important; opacity: 1 !important; margin-left: 2px !important; }
-        #footer span:last-child { display: none !important; }
+        #footer2 span:last-child { display: none !important; }
         .post-item { transition: transform ${GLOBAL_CONFIG.transition}, box-shadow ${GLOBAL_CONFIG.transition}; }
         .post-item:hover { 
             transform: translateY(-2px); 
