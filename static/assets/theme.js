@@ -66,16 +66,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             .SideNav { 
                 margin: 0 !important;
-                max-width: 100%;
+                max-width: 100% !important;
             }
             .SideNav-item { 
                 padding: 12px 8px !important;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
             }
-            .listLabels { margin-left: 8px; }
-            .Label { margin-right: 4px; }
+            .listLabels { margin-left: 8px !important; }
+            .Label { margin-right: 4px !important; }
             .markdown-body {
                 font-size: 14px !important;
             }
