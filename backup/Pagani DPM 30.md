@@ -92,7 +92,10 @@ $$q_d = \frac{M^2 \cdot H}{A \cdot e \cdot (M + M')}$$
 * **锥头监控**：探头直径磨损超过 $1\text{ mm}$ 后会严重降低击数准确性，需及时更换。
 ---
 
-<img width="885" height="616" alt="Image" src="https://github.com/user-attachments/assets/0fb7b9e5-c2b5-4c09-a2f0-a4a4a3357612" />
-[官方页](https://www.pagani-geotechnical.com/en/dpm-30) [册子](https://issuu.com/paganigeotechnicalequipment/docs/dpm30_en/3?ff)
+<img width="700" height="491" alt="Image" src="https://github.com/user-attachments/assets/0fb7b9e5-c2b5-4c09-a2f0-a4a4a3357612" />
+
+[官方页](https://www.pagani-geotechnical.com/en/dpm-30)
+[册子](https://issuu.com/paganigeotechnicalequipment/docs/dpm30_en/3?ff)
+[册子](https://www.primeresins.com/media/8165/dynamic-cone-penetrometer-tds.pdf)
 
 
