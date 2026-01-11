@@ -1,26 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {    
-    const currentUrl = window.location.pathname;
 
-    const GLOBAL_CONFIG = {
-        bgUrl: '/bj2.webp',
-        bodyBg: 'rgba(237, 239, 233, 0.85)',
-        maxWidth: '885px',
-        borderRadius: '10px',
-        transition: '0.2s ease-out',
-        accentColor: 'rgb(239, 112, 96)',
-        codeBg: 'rgba(243, 244, 243, 0.97)',
-        hoverColor: '#c3e4e3'
-    };
-
-    const preloadBackgroundImage = () => {
-        const bgImg = new Image();
-        bgImg.src = GLOBAL_CONFIG.bgUrl;
-        
-        bgImg.onerror = () => {
-            const fallbackStyle = document.createElement('style');
-            fallbackStyle.innerHTML = `
-                html { 
-                    background: #e9ebe5 !important;
                 }
             `;
             document.head.appendChild(fallbackStyle);
