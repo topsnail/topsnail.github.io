@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             body { flex-shrink: 0 !important; width: ${GLOBAL_CONFIG.maxWidth} !important; max-width: ${GLOBAL_CONFIG.maxWidth} !important; }
             .SideNav-item:hover { background-color: ${GLOBAL_CONFIG.hoverColor}; transform: scale(1.02); box-shadow: 0 0 5px rgba(0,0,0,0.5); }
             @media (max-width: 767px) {
-                html { align-items: flex-start !important; padding-top: 10px !important; }
+                html { align-items: flex-start !important; justify-content: center !important; padding-top: 10px !important; }
                 body { width: calc(100% - 20px) !important; max-width: calc(100% - 20px) !important; margin: 10px auto !important; }
             }
         `;
