@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>joanan</title><link>https://joanan.cn</link><description>Collecting seashells in a corner of the web</description><copyright>joanan</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/avatar.svg</url><title>avatar</title><link>https://joanan.cn</link></image><lastBuildDate>Fri, 28 Aug 2026 02:34:00 +0000</lastBuildDate><managingEditor>joanan</managingEditor><ttl>60</ttl><webMaster>joanan</webMaster><item><title>demo</title><link>https://joanan.cn/post/demo.html</link><description>&lt;!-- ##{'timestamp':1521622896}## --&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>joanan</title><link>https://joanan.cn</link><description>Collecting seashells in a corner of the web</description><copyright>joanan</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/avatar.svg</url><title>avatar</title><link>https://joanan.cn</link></image><lastBuildDate>Fri, 28 Aug 2026 02:34:43 +0000</lastBuildDate><managingEditor>joanan</managingEditor><ttl>60</ttl><webMaster>joanan</webMaster><item><title>虚拟环境与打包</title><link>https://joanan.cn/post/xu-ni-huan-jing-yu-da-bao.html</link><description>&lt;!-- ##{'timestamp':1603247155}## --&gt;
+
+
+
+## 🧱 一、 虚拟环境阶段：环境隔离与配置
+
+虚拟环境（Virtual Environment）的核心价值在于为特定项目构建独立的运行时（Runtime），实现项目依赖项与系统全局环境的完全解耦。</description><guid isPermaLink="true">https://joanan.cn/post/xu-ni-huan-jing-yu-da-bao.html</guid><pubDate>Wed, 21 Oct 2020 02:25:55 +0000</pubDate></item><item><title>demo</title><link>https://joanan.cn/post/demo.html</link><description>&lt;!-- ##{'timestamp':1521622896}## --&gt;
 
 
 ## 合并
