@@ -1,6 +1,29 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
+    "title":"Topmer",
+    "subTitle":"Collecting seashells in a corner of the web",
+    "homeUrl":"https://topmer.top",
+    "avatarUrl":"/avatar.svg",
+    "singlePage":["about"],
+    "rssButton": "disable",
+    "GMEEK_VERSION":"last",
+    "startSite":"",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "commentLabelColor":"#006b75",
+    "themeMode":"fix",
+    "dayTheme":"light",
+    "urlMode":"issue",
+    "onePageListNum":15,
+    "showPostSource":0,
+    "needComment":0,
+    "bottomText":"🔝Topmer",
+        "iconList":{
+        "图床":"M16 13.25A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75ZM1.75 2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h.94l.03-.03 6.077-6.078a1.75 1.75 0 0 1 2.412-.06L14.5 10.31V2.75a.25.25 0 0 0-.25-.25Zm12.5 11a.25.25 0 0 0 .25-.25v-.917l-4.298-3.889a.25.25 0 0 0-.344.009L4.81 13.5ZM7 6a2 2 0 1 1-3.999.001A2 2 0 0 1 7 6ZM5.5 6a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0Z",
+        "留言":"M10.5 3.5H1.75a.25.25 0 0 0-.25.25v.32L8 7.88l3.02-1.77a.75.75 0 0 1 .758 1.295L8.379 9.397a.75.75 0 0 1-.758 0L1.5 5.809v6.441c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-4.5a.75.75 0 0 1 1.5 0v4.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25V4.513a.75.75 0 0 1 0-.027V3.75C0 2.784.784 2 1.75 2h8.75a.75.75 0 0 1 0 1.5Z M14 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"   
+    },
+    "exlink":{
+        "图床":"https://p.topmer.top",
+        "留言":"https://ly.topmer.top"
+    },
+    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
+    "allHead":"<script defer src='/assets/theme.js'></script><script defer src='/assets/toc.js'></script><script defer src='/assets/GmeekVercount.js'></script><script defer src='/assets/instantpage.js'></script><style>#buttonRSS{display:none!important;}#runday{display:none!important;}#footer2 span:last-child{display:none!important;}</style>"
 }
