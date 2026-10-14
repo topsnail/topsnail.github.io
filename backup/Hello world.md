@@ -1,219 +1,508 @@
 <!-- ##{"timestamp":1498702839,"style":"<style>p span{filter:blur(3px);background:rgba(200,200,200,0.3);color:rgba(0,0,0,0.5);cursor:pointer;transition:0.3s;padding:2px 5px;border-radius:4px}p span:hover{filter:blur(0);background:transparent;color:inherit}</style>"}## -->
+# Markdown 渲染测试
 
-
-<span>第一篇帖子，先试试是否乱码</span>
-
----
-## 一、 基础 ASCII 字符（0-127）- 必测基础
-### 1.  字母与数字
-大写：A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-小写：a b c d e f g h i j k l m n o p q r s t u v w x y z
-数字：0 1 2 3 4 5 6 7 8 9
-混合：A1 b2 C3 d4 E5 f6 G7 h8 I9 j0
-
-### 2.  标点与特殊符号（含易混淆符号）
-英文标点：! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
-
-易混淆对比：
-- 全角 vs 半角：，, 。. ；; ：: ！! ？? “”"" ‘’'' （）() 【】[]
-- 相似符号：`~ ¬¦ ¡¢ £¤ ¥¦ §¨ ©ª «¬ ­® ¯° ±² ³´ µ¶ ·¸ ¹º »¼ ½¾ ¿À
-
-### 3.  空白字符（网页对空白的解析）
-- 普通空格：(  两个空格  ) (    四个空格    )
-- 制表符（Tab）：(	一个制表符	) (			两个制表符			)
-- 换行符：
-  第一行换行
-  第二行换行
-  第三行换行
+本文件用于检查本站 Markdown 预览效果（markdown-it · Prism · KaTeX · Mermaid · medium-zoom）。  
+**只展示渲染结果**，不含语法教学代码。若某段仍显示为源码，说明当前环境未启用该能力。
 
 ---
 
-## 二、 多语言字符（ UTF-8 兼容性）
-### 1.  中文（简体/繁体/生僻字/异体字）
-- 简体常用：学而时习之，不亦说乎？有朋自远方来，不亦乐乎？
-- 繁体常用：學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？
-- 生僻汉字：龘（dá）靇（líng）齉（nàng）龖（dá）䶮（yǎn）𪚥（zhé）𠔥（jì）𪚩（líng）
-- 异体字对比：裏-里 麵-面 鬚-须 臺-台 夠-够
-- 注音符号：ㄅㄆㄇㄈ ㄉㄊㄋㄌ ㄍㄎㄏ ㄐㄑㄒ ㄓㄔㄕㄖ ㄗㄘㄙ ㄧㄨㄩ ㄚㄛㄜㄝ ㄞㄟㄠㄡ ㄢㄣㄤㄥ ㄦ
+## 1. 标题
 
-### 2.  东亚其他语言
-#### 日文
-- 平假名：あいうえお かきくけこ さしすせそ たちつてと なにぬねの はひふへほ まみむめも やゆよ らりるれろ わをん
-- 片假名：アイウエオ カキクケコ サシスセソ タチツテト ナニヌネノ ハヒフヘホ マミムメモ ヤユヨ ラリルレロ ワヲン
-- 日文汉字：今日は天気が良いです。私はコーヒーが好きです。
+正文里用 H4–H6 做实渲染（避免再出现多个一级标题打乱大纲）。H1 即本文标题；H2/H3 见各章节。
 
-#### 韩文
-- 韩文字母：ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ ㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ
-- 韩文单词：안녕하세요（你好） 감사합니다（谢谢） 미안합니다（对不起） 한국어（韩语）
+#### 四级标题
+##### 五级标题
+###### 六级标题
 
-### 3.  欧洲语言（含重音/特殊字母）
-- 英语：The quick brown fox jumps over the lazy dog.（全字母句子）
-- 法语：À á Â â Ä ä Ç ç È é Ê ê Ë ë Ì í Î î Ï ï Ò ó Ô ô Ö ö Ù ú Û û Ü ü ÿ
-- 德语：Ä ä Ö ö Ü ü ß（eszett） Hallo, wie geht es dir?
-- 俄语（西里尔字母）：АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-  俄语句子：Привет, мир! Как дела?
-- 希腊语：Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω
-  希腊语句子：Γεια σου κόσμε!
+Setext 样式（若引擎支持）：
 
-### 4.  其他语言
-- 阿拉伯语（从右到左）：السلام عليكم （你好） شكرًا （谢谢）
-- 泰语：สวัสดีครับ （你好，男性用语） ขอบคุณ （谢谢）
-- 希伯来语（从右到左）：שלום עולם （你好世界）
-- 印地语：नमस्ते दुनिया （你好世界）
+小标题（Setext 二级）
+-----------
 
 ---
 
-## 三、 专业符号与特殊字符集
-### 1.  数学符号
-- 基础运算：± × ÷ √ ∛ ∜ ⁿ√ ∝ ∞ ∑ ∏ ∫ ∬ ∭
-- 关系符号：≡ ≌ ≈ ≠ ≤ ≥ ≮ ≯ ⊂ ⊃ ⊆ ⊇ ∈ ∉ ∋ ∝
-- 几何符号：∠ ⊥ ∥ △ □ ○ ⊙ ∠ ∟ ㇏ ㇐ ㇑ ㇒ ㇓ ㇔
-- 逻辑符号：∧ ∨ ¬ ∀ ∃ ∄ ∴ ∵ ↔ ↕ ↖ ↗ ↘ ↙
+## 2. 段落与换行
 
-### 2.  单位符号
-- 国际单位：℃ ℉ ㎞ ㎏ ㎝ ㎜ ㎡ ㎢ ㎣ ㏄ ㏎ ㏕ ㏖ ㏗
-- 其他单位：℅ № ℡ ™ © ® ℗ ℠ Ω ℧ ℤ ℕ ℚ ℝ ℂ
+这是第一段。段落之间空一行。
 
-### 3.  货币符号
-¥ $ € £ ¢ ₩ ₽ ₹ ₫ ₪ ₺ ₴ ₵ ₭ ₮ ₦ ₲ ₱
+这是第二段。  
+上一行末尾两个空格，本行应硬换行续写。
 
-### 4.  箭头符号
-← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ➡️ ⬅️ ⬆️ ⬇️ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➱
-
-### 5.  图形符号（方块/星星等）
-■ □ ▪ ▫ ▶ ▷ ◀ ◁ ★ ☆ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁ ❂ ❃ ❄ ❅ ❆ ❇ ❈ ❉ ❊ ❋
+本站开启了 `breaks`：单回车也会换行  
+像这样。
 
 ---
 
-## 四、 Emoji 表情符号（彩色渲染）
-### 1.  基础表情
-😊 😂 😍 😎 😡 😢 😱 😴 😤 😜 😝 😛 😋 😌 😒 😓 😔 😕 😖 😗 😘 😙 😚
+## 3. 强调与行内
 
-### 2.  物品与工具
-📱 💻 ⌨️ 🖥️ 🖨️ 🖱️ 🖲️ 📷 📹 🎥 📺 📻 🎙️ 🎚️ 🎛️ ⚙️ 🔧 🔨 🛠️ 📝 📜 📄 📃 📑
-
-### 3.  动植物与自然
-🌳 🌲 🌿 ☘️ 🍀 🌸 🌼 🌹 🌻 🌺 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍒 🐶 🐱 🐭 🐹 🐰 🐸 🐨 🐻
-
-### 4.  旗帜与符号
-🏳️ 🏴 🏁 🚩 🎌 🇨🇳 🇺🇸 🇯🇵 🇰🇷 🇫🇷 🇩🇪 🇬🇧 🇷🇺 🇮🇳 🇧🇷
-
----
-
-## 五、 控制字符与不可见字符（网页过滤/渲染）
-1.  **零宽空格**：‌（此处有1个零宽空格）‌‌（此处有2个零宽空格）
-2.  **零宽非断空格**：‍（此处有1个零宽非断空格）‍‍（此处有2个）
-3.  **零宽连字符**：‑（此处有1个）‑‑（此处有2个）
-4.  **软连字符**：­（此处有1个）­­（此处有2个）
-5.  **字节顺序标记（BOM）**：﻿（UTF-8 BOM 字符）
-6.  **换行符/回车符**：
-    [CR]
-    [LF]
-    [CRLF]
-7.  **其他不可见字符**：（垂直制表符）（换页符）
+- **粗体（星号）**
+- __粗体（下划线）__
+- *斜体（星号）*
+- _斜体（下划线）_
+- ***粗斜体***
+- `行内代码`
+- 混合：**粗体**、*斜体*、`code`
+- ~~删除线~~
+- ==高亮标记==
+- 上标：x^2^、2^10^
+- 下标：H~2~O、CO~2~
 
 ---
 
-## 六、 各类数学公式（网页公式渲染/字符兼容）
-### 1.  基础代数公式
-- 一元二次方程求根公式：$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
-- 平方差公式：$a^2 - b^2 = (a + b)(a - b)$
-- 完全平方公式：$(a \pm b)^2 = a^2 \pm 2ab + b^2$
-- 立方和/差公式：$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$；$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$
-- 指数运算公式：$a^m \cdot a^n = a^{m+n}$；$(a^m)^n = a^{mn}$；$(ab)^n = a^n b^n$
-- 对数运算公式：$\log_a(MN) = \log_a M + \log_a N$；$\log_a \frac{M}{N} = \log_a M - \log_a N$；$\log_a M^n = n \log_a M$
+## 4. 列表
 
-### 2.  高等数学公式
-- 极限公式：$\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e$；$\lim_{x \to 0} \frac{\sin x}{x} = 1$
-- 导数公式：$(x^n)' = nx^{n-1}$；$(\sin x)' = \cos x$；$(\cos x)' = -\sin x$；$(e^x)' = e^x$；$(\ln x)' = \frac{1}{x}$
-- 积分公式：$\int x^n dx = \frac{1}{n+1}x^{n+1} + C \ (n \neq -1)$；$\int \frac{1}{x} dx = \ln|x| + C$；$\int e^x dx = e^x + C$；$\int \sin x dx = -\cos x + C$
-- 定积分公式：$\int_a^b f(x) dx = F(b) - F(a)$（其中 $F'(x) = f(x)$）
-- 泰勒展开式：$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots$
-- 高斯积分：$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$
+无序：
 
-### 3.  几何与三角公式
-- 勾股定理：$a^2 + b^2 = c^2$（直角三角形两直角边的平方和等于斜边的平方）
-- 三角形面积公式：$S = \frac{1}{2}ah$；$S = \frac{1}{2}bc \sin A$；$S = \sqrt{p(p-a)(p-b)(p-c)}$（其中 $p = \frac{a+b+c}{2}$，海伦公式）
-- 三角函数基本关系：$\sin^2 \alpha + \cos^2 \alpha = 1$；$\tan \alpha = \frac{\sin \alpha}{\cos \alpha}$；$\cot \alpha = \frac{\cos \alpha}{\sin \alpha}$
-- 三角函数和差公式：$\sin(\alpha \pm \beta) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta$；$\cos(\alpha \pm \beta) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta$
-- 圆的公式：圆周长 $C = 2\pi r$；圆面积 $S = \pi r^2$；球的体积 $V = \frac{4}{3}\pi r^3$；球的表面积 $S = 4\pi r^2$
-- 椭圆公式：$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$（标准椭圆方程，长半轴 $a$，短半轴 $b$）
+- 苹果
+- 香蕉
+  - 芭蕉
+  - 大蕉
+- 橙子
 
-### 4.  线性代数公式
-- 矩阵乘法：设 $A = (a_{ij})_{m \times s}$，$B = (b_{ij})_{s \times n}$，则 $C = AB = (c_{ij})_{m \times n}$，其中 $c_{ij} = \sum_{k=1}^s a_{ik} b_{kj}$
-- 行列式（二阶）：$\begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc$
+有序：
 
+1. 第一步
+2. 第二步
+   1. 子步骤 A
+   2. 子步骤 B
+3. 第三步
 
-### 5.  概率与统计公式
-- 排列公式：$A_n^m = \frac{n!}{(n - m)!}$（从 $n$ 个不同元素中取出 $m$ 个元素的排列数）
-- 组合公式：$C_n^m = \frac{n!}{m!(n - m)!}$（从 $n$ 个不同元素中取出 $m$ 个元素的组合数）
-- 期望公式：离散型随机变量 $E(X) = \sum_{i=1}^n x_i P(X = x_i)$；连续型随机变量 $E(X) = \int_{-\infty}^{\infty} x f(x) dx$
-- 方差公式：$D(X) = E(X^2) - [E(X)]^2$
-- 正态分布概率密度函数：$f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$（其中 $\mu$ 为均值，$\sigma$ 为标准差）
+任务列表：
 
-### 6.  离散数学与数论公式
-- 欧拉公式（复变函数）：$e^{i\theta} = \cos \theta + i \sin \theta$，当 $\theta = \pi$ 时，$e^{i\pi} + 1 = 0$
-- 二项式定理：$(a + b)^n = \sum_{k=0}^n C_n^k a^{n-k} b^k$
-- 同余式：若 $a - b$ 能被 $m$ 整除，则 $a \equiv b \pmod{m}$
-- 欧几里得算法（最大公约数）：$\gcd(a, b) = \gcd(b, a \bmod b)$
+- [x] 已完成
+- [ ] 未完成
+- [ ] 另一项待办
 
 ---
 
-## 七、 复杂字符表格（网页表格渲染与字符兼容）
-### 1.  多语言+特殊符号对照表
-| 类别         | 语言/符号类型       | 示例内容                                                                 | 备注说明                     |
-| :----------- | :------------------ | :----------------------------------------------------------------------- | :--------------------------- |
-| 中文         | 简体中文            | 天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。                                 | 常用古籍文本，中文渲染   |
-| 中文         | 繁体中文            | 天地玄黃，宇宙洪荒。日月盈昃，辰宿列張。                                 | 繁体字符兼容             |
-| 中文         | 生僻汉字            | 龘、靇、齉、䶮、𪚥、𠔥                                                 | 生僻字/扩展汉字显示      |
-| 东亚语言     | 日文（平/片假名）   | あいうえお、アイウエオ、今日は天気が良いです。                           | 日文全类型字符           |
-| 东亚语言     | 韩文                | ㄱㄴㄷㄹ、안녕하세요、감사합니다                                           | 韩文音节与单词           |
-| 欧洲语言     | 俄语（西里尔字母）  | АБВГДЕЁ、Привет, мир! Как дела?                                          | 西里尔字母渲染           |
-| 欧洲语言     | 德语/法语（重音）   | ÄäÖöÜüß（德）、ÀáÇçÈé（法）、Hallo, wie geht es dir?                     | 重音字符兼容             |
-| 特殊语言     | 阿拉伯语（从右到左） | السلام عليكم、شكرًا                                                     | 右向左排版与阿拉伯字母   |
-| 特殊语言     | 泰语                | สวัสดีครับ、ขอบคุณ                                                     | 泰语音节渲染             |
-| 基础符号     | 数学运算符号        | ± × ÷ √ ∛ ∞ ∑ ∏ ∫                                                       | 数学基础符号显示         |
-| 基础符号     | 货币符号            | ¥ $ € £ ¢ ₩ ₽ ₹ ₫                                                       | 全球主流货币符号         |
-| 基础符号     | 单位符号            | ℃ ℉ ㎞ ㎏ ㎡ ㏄ ㏎                                                       | 特殊单位字符兼容         |
-| Emoji符号    | 基础表情/物品       | 😊 😂 📱 💻 🌍 🎉                                                       | 彩色Emoji渲染效果        |
-| 图形符号     | 方块/星星符号       | ■ □ ★ ☆ ✿ ❀ ❄                                                         | 图形符号显示效果         |
+## 5. 链接与图片
 
-### 2.  字符属性对比表
-| 字符类型         | 编码范围       | 示例字符                | 网页渲染要求                  | 要点                     |
-| :--------------- | :------------- | :---------------------- | :---------------------------- | :--------------------------- |
-| ASCII字符        | 0-127          | A a 0 ! @ #             | 所有网页均支持                | 基础兼容性验证               |
-| 中文GB2312       | GB2312编码     | 中 国 测 试             | 需支持GB2312或UTF-8编码       | 简体中文基础兼容             |
-| 中文GBK          | GBK编码        | 䶮 靇                   | 需支持GBK或UTF-8编码          | 扩展中文字符兼容             |
-| 中文Unicode      | UTF-8编码      | 龘 𪚥 𠔥                 | 需支持UTF-8编码（utf8mb4）    | 超大字符集扩展兼容           |
-| 全角字符         | Unicode全角区   | ， 。 ； ： （ ）       | 需区分全角/半角排版          | 排版对齐与字符识别           |
-| 半角字符         | ASCII半角区     | , . ; : ( )             | 与全角字符的排版差异          | 字符宽度与间距对比           |
-| 不可见字符       | 控制字符区     | ‌ ‍ ­                   | 不可见但影响排版              | 网页对控制字符的过滤/保留    |
-| 上下标字符       | Unicode上下标区 | ¹ ² ³ ₁ ₂ ₃             | 需支持上下标排版              | 字符基线对齐与显示效果       |
-| 数学公式字符     | LaTeX/Unicode  | $\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | 需支持MathJax或KaTeX渲染      | 复杂公式排版与符号完整性     |
+- [普通链接](https://example.com)
+- [带标题的链接](https://example.com "Example")
+- [邮箱链接](mailto:test@example.com)
+- 自动链接：https://example.com
+- 尖括号链接：<https://example.com>
+- 引用式链接：[GitHub][ref-github]
 
-### 3.  文本排版表
-| 排版类型         | 示例内容                                                                 | 网页渲染要求                  | 要点                     |
-| :--------------- | :----------------------------------------------------------------------- | :---------------------------- | :--------------------------- |
-| 普通换行         | 第一行文本<br>第二行文本<br>第三行文本                                   | 识别换行符或<br>标签          | 换行对齐与间距控制           |
-| 空格排版         | 文本  两个空格  文本    四个空格  文本                                   | 保留空格或自动合并            | 空格保留策略验证             |
-| 制表符排版       | 文本	制表符	文本			两个制表符	文本                               | 识别Tab键或制表符编码         | 制表符缩进效果验证           |
-| 超长无空格文本   | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 自动换行或横向滚动            | 网页换行策略与溢出处理       |
-| 混合字符排版     | 123!@#￥%あいう안녕하세요😊💻                                         | 多种字符混合排版              | 字符基线对齐与间距一致性     |
-| 上下标排版       | X¹ X² X³ X₁ X₂ X₃ (a+b)²=a²+2ab+b²                                       | 上下标与正文对齐              | 排版美观度与字符对齐         |
-| 斜线文本排版     | A/B/C/D/E/F/G  A\B\C\D\E\F\G                                             | 斜线与字符间距控制            | 特殊排版的显示效果           |
+[ref-github]: https://github.com
+
+普通图片：
+
+![示例图片](https://placehold.co/320x120/png?text=Markdown+Image)
+
+引用式图片：
+
+![引用式图片][ref-img]
+
+[ref-img]: https://placehold.co/200x80/png?text=Ref+Image "引用式图片"
 
 ---
 
-## 八、 特殊文本排版
-### 1.  上下标
-X¹ X² X³ X⁴ X⁵ X⁶ X⁷ X⁸ X⁹ X⁰ X⁺ X⁻ X⁼ X⁽ X⁾ X₁ X₂ X₃ X₄ X₅ X₆ X₇ X₈ X₉ X₀ X₊ X₋ X₌ X₍ X₎
+## 6. 引用块
 
-### 2.  斜线文本
-A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z
-A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+> 第一段引用。
+>
+> 第二段引用。
+>
+> > 嵌套引用。
 
-### 3.  超长无空格文本（换行）
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+---
 
-### 4.  混合字符排版
-123！@#￥%……&*（）——+｜【】‘；：”，。、？abcdefgABCDEFG一二三亖五六七八九十甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥あいうえおアイウエオ안녕하세요ㄱㄴㄷㄹПривет мир😊💻🌍
+## 7. 代码块与语法高亮
+
+行内：`const x = 1`
+
+```javascript
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("Markdown"));
+```
+
+```python
+def add(a, b):
+    return a + b
+
+print(add(1, 2))
+```
+
+```ts
+type User = { id: number; name: string };
+
+export function hello(user: User): string {
+  return `Hi, ${user.name}`;
+}
+```
+
+```
+plain text
+line 2
+```
+
+缩进代码块（行首 4 空格）：
+
+    function indentedBlock() {
+      return true;
+    }
+
+---
+
+## 8. 分割线与转义
+
+上方
+
+---
+
+中间
+
+***
+
+下方
+
+___
+
+转义后应显示为字面量（不是标题 / 斜体 / 代码 / 链接）：
+
+\# 这不是标题
+
+\*不是斜体\*
+
+\`不是代码\`
+
+\\ 反斜杠本身
+
+\[链接](url) 不变成链接
+
+---
+
+## 9. 表格
+
+| 左对齐 | 居中 | 右对齐 | 说明 |
+| :----- | :--: | -----: | ---- |
+| A | B | 1 | 文本 |
+| 较长内容 | 中 | 999 | 数字 |
+| `code` | **粗** | *斜* | 混合 |
+
+表格内常见写法：
+
+| 功能 | 详情 |
+|------|------|
+| 代码 | `inline` 代码 |
+| 链接 | [Example](https://example.com) |
+| 强调 | **粗** / *斜* / ~~删~~ |
+
+---
+
+## 10. 脚注与表情
+
+标准脚注：这里有一个引用[^1]。  
+命名脚注：另见说明[^note]。
+
+[^1]: 数字脚注内容。
+[^note]: 命名脚注内容。
+
+表情简码：:rocket: :white_check_mark: :warning: :smile: :thumbsup:
+
+原生 Emoji：😊 🚀 ✅ ⚠️ 💻 🌍
+
+---
+
+## 11. 数学公式（KaTeX）
+
+### 11.1 行内与块级
+
+行内：$E=mc^2$，欧拉公式 $e^{i\pi}+1=0$，勾股 $a^2+b^2=c^2$。
+
+块级：
+
+$$
+\int_0^1 x^2 \, dx = \frac{1}{3}
+$$
+
+$$
+A=\pi r^2
+$$
+
+### 11.2 分式、求和、积分、希腊字母
+
+分数 $\frac{a}{b}$，根号 $\sqrt{a^2+b^2}$，求和 $\sum_{i=1}^{n} i$，希腊字母 $\alpha,\beta,\gamma,\Delta,\Omega$。
+
+$$
+\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6},\quad \int_{-\infty}^{+\infty}e^{-x^2}\,dx=\sqrt{\pi}
+$$
+
+### 11.3 矩阵、对齐、分段、方程组
+
+$$
+\begin{pmatrix}
+1 & 2 \\
+3 & 4
+\end{pmatrix}
+$$
+
+$$
+\begin{aligned}
+y &= 2x + 1 \\
+&= 2(x+0.5)
+\end{aligned}
+$$
+
+$$
+f(x)=
+\begin{cases}
+1, & x>0 \\
+0, & x\le 0
+\end{cases}
+$$
+
+$$
+\left\{
+\begin{aligned}
+x+y &= 3 \\
+x-y &= 1
+\end{aligned}
+\right.
+$$
+
+$$
+\underbrace{a+b+c}_{S}
+$$
+
+### 11.4 常见公式摘录
+
+- 求根公式：$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+- 极限：$\lim_{x \to 0} \frac{\sin x}{x} = 1$
+- 正态分布：$f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$
+- 麦克斯韦方程组：
+
+$$
+\begin{array}{c}
+\nabla \times \vec{\mathbf{B}} -\, \frac{1}{c}\, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+\nabla \cdot \vec{\mathbf{E}} = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac{1}{c}\, \frac{\partial\vec{\mathbf{B}}}{\partial t} = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} = 0
+\end{array}
+$$
+
+也可用围栏写法：
+
+```math
+\frac{d}{dx}\left( \int_{0}^{x} f(t)\,dt \right) = f(x)
+```
+
+---
+
+## 12. Mermaid 图表
+
+### 12.1 流程图
+
+```mermaid
+flowchart TD
+  A["开始"] --> B{"判断"}
+  B -->|"是"| C["处理"]
+  B -->|"否"| D["结束"]
+  C --> D
+```
+
+```mermaid
+graph LR
+  X --> Y --> Z
+```
+
+### 12.2 时序图
+
+```mermaid
+sequenceDiagram
+  participant U as User
+  participant S as Server
+  U->>S: Request
+  S-->>U: Response
+```
+
+### 12.3 类图
+
+```mermaid
+classDiagram
+  class Animal {
+    +String name
+    +eat()
+  }
+  class Dog {
+    +bark()
+  }
+  Animal <|-- Dog
+```
+
+### 12.4 状态图
+
+```mermaid
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> Running: start
+  Running --> Idle: stop
+  Running --> [*]
+```
+
+### 12.5 ER 图
+
+```mermaid
+erDiagram
+  USER ||--o{ ORDER : places
+  ORDER ||--|{ LINE_ITEM : contains
+  USER {
+    string id
+    string name
+  }
+  LINE_ITEM {
+    int quantity
+    float price
+  }
+```
+
+### 12.6 甘特图
+
+```mermaid
+gantt
+  title Demo Gantt
+  dateFormat YYYY-MM-DD
+  section Phase
+  Design :a1, 2026-01-01, 7d
+  Develop :a2, after a1, 14d
+  Test :a3, after a2, 5d
+```
+
+### 12.7 饼图
+
+```mermaid
+pie
+  title Demo Share
+  "A" : 40
+  "B" : 30
+  "C" : 30
+```
+
+### 12.8 思维导图
+
+```mermaid
+mindmap
+  root((Markdown))
+    Base
+      Heading
+      List
+    Extra
+      GFM
+      Math
+```
+
+### 12.9 Git 分支图
+
+```mermaid
+gitGraph
+  commit id: "init"
+  branch develop
+  checkout develop
+  commit id: "feat"
+  checkout main
+  merge develop
+  commit id: "release"
+```
+
+### 12.10 时间线
+
+```mermaid
+timeline
+    title 项目里程碑
+    2026-10-01 : 立项
+    2026-10-07 : 设计完成
+    2026-10-14 : 开发启动
+    2026-11-01 : 测试
+```
+
+---
+
+## 13. 图片灯箱（medium-zoom）
+
+点击图片应出现半透明遮罩、图片居中放大。链接包裹的图、代码块里的图一般不应进灯箱。
+
+### 13.1 竖图
+
+![竖图](https://placehold.co/400x600/png?text=Portrait)
+
+### 13.2 多图（批量绑定）
+
+![图1](https://placehold.co/240x160/png?text=Zoom+1)
+![图2](https://placehold.co/240x160/png?text=Zoom+2)
+![图3](https://placehold.co/240x160/png?text=Zoom+3)
+
+### 13.3 链接包裹（点击易跳转而非灯箱）
+
+[![带链接的图](https://placehold.co/240x160/png?text=Linked)](https://placehold.co/800x500/png?text=Target)
+
+### 13.4 行内图
+
+这是一段文字，里面放一张图 ![小图](https://placehold.co/64x64/png?text=in) 然后继续文字。
+
+### 13.5 代码块里的图片语法（不应触发灯箱）
+
+```markdown
+![不应灯箱](https://placehold.co/100x100/png?text=code)
+```
+
+---
+
+## 14. 字符与多语言（精简）
+
+### 14.1 ASCII 与易混标点
+
+`A-Z` `a-z` `0-9`  
+`! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ \` { | } ~`
+
+全角 vs 半角：，, 。. ；; ：: ！! ？? （）() 【】[]
+
+### 14.2 中日韩与其它文字
+
+- 简体：学而时习之，不亦说乎？
+- 繁体：學而時習之，不亦說乎？
+- 生僻字：龘 靇 齉 䶮
+- 日文：あいうえお / アイウエオ / 今日は天気が良いです。
+- 韩文：안녕하세요 감사합니다
+- 俄语：Привет, мир!
+- 阿拉伯语（RTL）：السلام عليكم
+- 泰语：สวัสดีครับ
+
+### 14.3 符号与排版
+
+数学：± × ÷ √ ∞ ∑ ∫ ≈ ≠ ≤ ≥  
+货币：¥ $ € £ ₩ ₹  
+单位：℃ ℉ ㎞ ㎏ ㎡  
+箭头：← ↑ → ↓ ↔  
+图形：■ □ ★ ☆ ● ○
+
+上下标字符：X¹ X² X³ X₁ X₂ X₃  
+超长无空格（测换行）：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
+混合：123!@#あいう안녕😊💻
+
+---
+
+## 15. 本站未开启或通常无效（对照）
+
+下列写法多数预览器会原样显示或忽略，放在这里方便对照，**不是写错**：
+
+> [!NOTE]
+> GitHub Alert：本站未内置，多半当普通引用。
+
+Front Matter / TOC / HTML（本站 `html: false`，标签不会当 HTML 执行）：
+
+```text
+---
+title: demo
+---
+
+[TOC]
+
+<u>下划线</u>
+<details><summary>折叠</summary>内容</details>
+```
+
+PlantUML / Graphviz / Vega 等非 Mermaid 图表：本站只渲染 `mermaid` 围栏，其它语言会当普通代码块。
